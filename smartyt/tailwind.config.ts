@@ -11,9 +11,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'main-bg':"url('/bg-img.jpg')",
-      },
+    
       fontFamily: {
        bodyFont:['Urbanist',...defaultTheme.fontFamily.sans],
      }
