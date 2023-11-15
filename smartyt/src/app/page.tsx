@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Banner from './components/Banner'
 
 export default function Home() {
   return (
- <p>I am Fereshteh, I create a eCommerce app with next.js </p>
+    <div>
+      <Banner/>
+ </div>
   )
 }

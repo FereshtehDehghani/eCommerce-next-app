@@ -5,7 +5,9 @@ import Container from "./Container";
 import { LiaSearchSolid } from "react-icons/lia";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoMdCart } from "react-icons/io";
+import { FiLogOut } from "react-icons/fi";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -29,13 +31,15 @@ const Header = () => {
           />
         </div>
         {/* Login/Register */}
-        <div
-          onClick={() => signIn()}
-          className="headerDiv cursor-pointer hover:bg-[white]"
-        >
-          <AiOutlineUser className="text-2xl" />
-          <p className="text-sm font-semibold">Login/Register</p>
-        </div>
+        {!session && (
+          <div
+            onClick={() => signIn()}
+            className="headerDiv cursor-pointer hover:bg-[white]"
+          >
+            <AiOutlineUser className="text-2xl" />
+            <p className="text-sm font-semibold">Login/Register</p>
+          </div>
+        )}
         {/* Card button */}
         <div
           className="bg-black rounded-full text-slate-100 hover:text-white
@@ -51,6 +55,26 @@ const Header = () => {
             10
           </span>
         </div>
+        {/* User Image */}
+        {session && (
+          <Image
+            src={session?.user.image}
+            alt="user"
+            width="60"
+            height="60"
+            className="rounded-full object-cover"
+          />
+        )}
+        {/* Logout button */}
+        {session && (
+          <div
+            onClick={() => signOut()}
+            className="headerDiv px-2 gap-x-1 cursor-pointer"
+          >
+            <FiLogOut className="taxt-2xl" />
+            <p className="text-sm font-semibold">Logout</p>
+          </div>
+        )}
       </Container>
     </div>
   );
