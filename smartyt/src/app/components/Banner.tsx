@@ -6,6 +6,7 @@ import { PiCaretRightLight, PiCaretLeftLight } from "react-icons/pi"
 import bannerone from '@/images/bannerone.jpg';
 import bannertwo from '@/images/bannertwo.jpg';
 import bannerthree from '@/images/bannerthree.jpg';
+import BannerText from './BannerText';
 
 
 function Banner() {
@@ -47,6 +48,8 @@ function Banner() {
            quality={100}
            className="w-full h-full relative"
          />
+          <BannerText
+     title="today is beautifull"/>
           </div>
           <div>
               <Image
@@ -55,6 +58,8 @@ function Banner() {
            quality={100}
            className="w-full h-full relative"
          />
+          <BannerText
+     title="today is beautifull"/>
        </div>
          <div>
               <Image
@@ -63,9 +68,12 @@ function Banner() {
            quality={100}
            className="w-full h-full relative"
          />
-          </div>
-          
-        </Slider>
+              <BannerText
+     title="today is beautifull"/>
+       </div>
+   
+     </Slider>
+    
       </div>
     );
 }
