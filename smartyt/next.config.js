@@ -6,6 +6,14 @@ const nextConfig = {
       "img.freepik.com",
       "avatars.githubusercontent.com",
     ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
+        port: "",
+        pathname: "/img/**",
+      },
+    ],
   },
 };
 

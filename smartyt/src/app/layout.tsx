@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='font-bodyFont w-full bg-main-bg'>
+      <body className='font-bodyFont text-darkText w-full bg-main-bg'>
         <Layout>
  <Header/>
         {children}

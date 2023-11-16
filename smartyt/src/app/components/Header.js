@@ -14,7 +14,7 @@ const Header = () => {
   console.log(session);
 
   return (
-    <div className="bg-bodyColor h-20">
+    <div className="bg-bodyColor h-20 z-50 sticky top-0">
       <Container className="h-full flex items-center md:gap-5 justify-between md:justify-start">
         <Logo />
         {/* Search Feild */}

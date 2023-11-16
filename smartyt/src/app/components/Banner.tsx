@@ -80,7 +80,7 @@ function Banner() {
        </div>
    
      </Slider>
-    
+    <div className="absolute w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />
       </div>
     );
 }
